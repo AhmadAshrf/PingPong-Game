@@ -160,14 +160,12 @@ public:
 					cout << "\xDB"; //player1
 				else if (player2x == j && player2y == i)
 					cout << "\xDB"; //player2
-
 				else if (player1x == j && player1y + 1 == i)
 					cout << "\xDB"; //player1
 				else if (player1x == j && player1y + 2 == i)
 					cout << "\xDB"; //player1
 				else if (player1x == j && player1y + 3 == i)
 					cout << "\xDB"; //player1
-
 				else if (player2x == j && player2y + 1 == i)
 					cout << "\xDB"; //player1
 				else if (player2x == j && player2y + 2 == i)
@@ -189,8 +187,7 @@ public:
 
 		cout << "Score 1: " << score1 << endl << "Score 2: " << score2 << endl;
 	}
-	void Input()
-	{
+	void Input(){
 		ball->Move();
 
 		int ballx = ball->getX();
@@ -223,8 +220,7 @@ public:
 				quit = true;
 		}
 	}
-	void Logic()
-	{
+	void Logic(){
 		int ballx = ball->getX();
 		int bally = ball->getY();
 		int player1x = player1->getX();
@@ -257,10 +253,8 @@ public:
 		if (ballx == 0)
 			ScoreUp(player2);
 	}
-	void Run()
-	{
-		while (!quit)
-		{
+	void Run(){
+		while (!quit){
 			Draw();
 			Input();
 			Logic();
